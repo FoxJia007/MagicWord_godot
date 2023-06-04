@@ -1,0 +1,205 @@
+[gd_scene load_steps=10 format=3 uid="uid://uggv27vswijl"]
+
+[ext_resource type="Script" path="res://mutiPlay/userInfo.gd" id="1_4w46u"]
+[ext_resource type="Texture2D" uid="uid://cwpbv243pcwyr" path="res://asset/images/background/background4.png" id="2_1pmll"]
+[ext_resource type="FontFile" uid="uid://5jgfpl817j6v" path="res://asset/font/上首至尊书法体.ttf" id="3_txp0j"]
+[ext_resource type="Texture2D" uid="uid://btodfc4wde4pa" path="res://asset/images/edit.png" id="4_8oevs"]
+[ext_resource type="StyleBox" uid="uid://o1o3o7gb6laq" path="res://asset/styles/back.tres" id="5_5gqnx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4xfa8"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vu2nn"]
+texture = ExtResource("4_8oevs")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hadyy"]
+texture = ExtResource("4_8oevs")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ufffj"]
+texture = ExtResource("4_8oevs")
+
+[node name="UserInfo" type="Node2D"]
+script = ExtResource("1_4w46u")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1282.0
+offset_bottom = 720.0
+texture = ExtResource("2_1pmll")
+
+[node name="LoginScreen" type="Panel" parent="."]
+offset_left = 257.0
+offset_top = 59.0
+offset_right = 990.0
+offset_bottom = 663.0
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxEmpty_4xfa8")
+
+[node name="title" type="Label" parent="LoginScreen"]
+layout_mode = 0
+offset_left = 269.0
+offset_top = 83.0
+offset_right = 457.0
+offset_bottom = 174.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_txp0j")
+theme_override_font_sizes/font_size = 80
+text = "登 录"
+
+[node name="userAccount" type="TextEdit" parent="LoginScreen"]
+layout_mode = 0
+offset_left = 186.0
+offset_top = 207.0
+offset_right = 545.0
+offset_bottom = 287.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_vu2nn")
+placeholder_text = "输入账号	"
+
+[node name="userpassword" type="TextEdit" parent="LoginScreen"]
+layout_mode = 0
+offset_left = 188.0
+offset_top = 330.0
+offset_right = 547.0
+offset_bottom = 410.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_readonly_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_hadyy")
+placeholder_text = "输入密码"
+
+[node name="login" type="Button" parent="LoginScreen"]
+layout_mode = 0
+offset_left = 189.0
+offset_top = 499.0
+offset_right = 412.0
+offset_bottom = 555.0
+text = "登录"
+
+[node name="toRegistry" type="Button" parent="LoginScreen"]
+layout_mode = 0
+offset_left = 456.0
+offset_top = 495.0
+offset_right = 539.0
+offset_bottom = 557.0
+text = "前往注册
+"
+
+[node name="RegistryScreen" type="Panel" parent="."]
+visible = false
+offset_left = 157.0
+offset_top = 92.0
+offset_right = 961.0
+offset_bottom = 649.0
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxEmpty_4xfa8")
+
+[node name="userName" type="TextEdit" parent="RegistryScreen"]
+layout_mode = 0
+offset_left = 414.0
+offset_top = 163.0
+offset_right = 773.0
+offset_bottom = 243.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxTexture_ufffj")
+placeholder_text = "输入您的名称"
+
+[node name="userAccount" type="TextEdit" parent="RegistryScreen"]
+layout_mode = 0
+offset_left = 414.0
+offset_top = 50.0
+offset_right = 773.0
+offset_bottom = 130.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxTexture_ufffj")
+placeholder_text = "输入账号	"
+
+[node name="userpassword" type="TextEdit" parent="RegistryScreen"]
+layout_mode = 0
+offset_left = 416.0
+offset_top = 265.0
+offset_right = 775.0
+offset_bottom = 345.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxTexture_ufffj")
+placeholder_text = "输入密码"
+
+[node name="checkpassword" type="TextEdit" parent="RegistryScreen"]
+layout_mode = 0
+offset_left = 418.0
+offset_top = 386.0
+offset_right = 777.0
+offset_bottom = 466.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxTexture_ufffj")
+placeholder_text = "请再次输入密码
+"
+
+[node name="registry" type="Button" parent="RegistryScreen"]
+layout_mode = 0
+offset_left = 415.0
+offset_top = 488.0
+offset_right = 638.0
+offset_bottom = 544.0
+text = "注册"
+
+[node name="toLogin" type="Button" parent="RegistryScreen"]
+layout_mode = 0
+offset_left = 682.0
+offset_top = 484.0
+offset_right = 765.0
+offset_bottom = 546.0
+text = "返回登录"
+
+[node name="title" type="Label" parent="RegistryScreen"]
+layout_mode = 0
+offset_left = 74.0
+offset_top = 122.0
+offset_right = 262.0
+offset_bottom = 304.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_txp0j")
+theme_override_font_sizes/font_size = 80
+text = "注
+  册"
+
+[node name="tips" type="Label" parent="."]
+visible = false
+offset_left = 333.0
+offset_top = 495.0
+offset_right = 557.0
+offset_bottom = 542.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "账号或者密码错误，请重新输入"
+
+[node name="back" type="Button" parent="."]
+offset_left = 1000.0
+offset_top = 50.0
+offset_right = 1142.0
+offset_bottom = 180.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_5gqnx")
+theme_override_styles/pressed = ExtResource("5_5gqnx")
+theme_override_styles/focus = ExtResource("5_5gqnx")
+text = "退出"
+
+[connection signal="pressed" from="LoginScreen/login" to="." method="_on_login_pressed"]
+[connection signal="pressed" from="LoginScreen/toRegistry" to="." method="_toggle"]
+[connection signal="pressed" from="RegistryScreen/registry" to="." method="_on_registry_pressed"]
+[connection signal="pressed" from="RegistryScreen/toLogin" to="." method="_toggle"]
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]

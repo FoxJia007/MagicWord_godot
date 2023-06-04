@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=3 uid="uid://w7br5pk8swx0"]
+
+[ext_resource type="Script" path="res://settings/settings.gd" id="1_gde8o"]
+[ext_resource type="Texture2D" uid="uid://wtuev6huwor6" path="res://asset/images/settingBack.png" id="2_2wlw8"]
+[ext_resource type="StyleBox" uid="uid://o1o3o7gb6laq" path="res://asset/styles/back.tres" id="3_dc2e1"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_nbkwt"]
+
+[node name="settings" type="Node2D"]
+script = ExtResource("1_gde8o")
+
+[node name="whitBack" type="TextureRect" parent="."]
+offset_left = -3.0
+offset_top = -3.0
+offset_right = 1282.0
+offset_bottom = 719.0
+texture = SubResource("CanvasTexture_nbkwt")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -3.0
+offset_top = -3.0
+offset_right = 1282.0
+offset_bottom = 719.0
+texture = ExtResource("2_2wlw8")
+expand_mode = 1
+
+[node name="music" type="CheckButton" parent="."]
+offset_left = 235.0
+offset_top = 222.0
+offset_right = 443.0
+offset_bottom = 285.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "背景音乐"
+
+[node name="Back" type="Button" parent="."]
+offset_left = 945.0
+offset_top = 109.0
+offset_right = 1041.0
+offset_bottom = 196.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = ExtResource("3_dc2e1")
+text = "返回"
+
+[connection signal="pressed" from="music" to="." method="_on_music_pressed"]
+[connection signal="pressed" from="Back" to="." method="_on_go_back_pressed"]

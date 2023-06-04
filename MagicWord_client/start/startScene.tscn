@@ -1,0 +1,176 @@
+[gd_scene load_steps=11 format=3 uid="uid://ckjik6wagb58g"]
+
+[ext_resource type="Script" path="res://start/startScene.gd" id="1_n38rc"]
+[ext_resource type="Texture2D" uid="uid://cwpbv243pcwyr" path="res://asset/images/background/background4.png" id="2_juuba"]
+[ext_resource type="AudioStream" uid="uid://bkjymel8lxwpx" path="res://asset/music/古筝背景音.mp3" id="2_nkgc2"]
+[ext_resource type="Texture2D" uid="uid://dvkt4i5hb00bd" path="res://asset/images/btn_circle.png" id="3_6qhff"]
+[ext_resource type="FontFile" uid="uid://5jgfpl817j6v" path="res://asset/font/上首至尊书法体.ttf" id="5_a4tn5"]
+[ext_resource type="PackedScene" uid="uid://w7br5pk8swx0" path="res://settings/settings.tscn" id="7_domwl"]
+[ext_resource type="StyleBox" uid="uid://8g0v3lbfmj1f" path="res://asset/styles/btn_vertical.tres" id="7_kli5u"]
+[ext_resource type="PackedScene" uid="uid://ckk00rccsoh0k" path="res://games/WordInWord/word_in_word.tscn" id="8_csnaq"]
+[ext_resource type="PackedScene" uid="uid://bj7hygvkbsw3j" path="res://games/LinkWord/LinkWords.tscn" id="9_xvies"]
+[ext_resource type="PackedScene" uid="uid://dtc8m35ww1lx8" path="res://games/GuessWord/GuessWord.tscn" id="10_2ba2j"]
+
+[node name="start_scene" type="Node2D"]
+script = ExtResource("1_n38rc")
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_nkgc2")
+
+[node name="ChooseLayer" type="Node2D" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="ChooseLayer"]
+offset_left = -638.0
+offset_top = -3.0
+offset_right = 1282.0
+offset_bottom = 719.0
+texture = ExtResource("2_juuba")
+expand_mode = 2
+
+[node name="setting" type="AspectRatioContainer" parent="ChooseLayer"]
+offset_left = 79.0
+offset_top = 48.0
+offset_right = 219.0
+offset_bottom = 150.0
+
+[node name="tb" type="TextureButton" parent="ChooseLayer/setting"]
+layout_mode = 2
+texture_normal = ExtResource("3_6qhff")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="settings" type="Button" parent="ChooseLayer/setting"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "设置"
+flat = true
+
+[node name="logout" type="AspectRatioContainer" parent="ChooseLayer"]
+offset_left = 1055.0
+offset_top = 37.0
+offset_right = 1195.0
+offset_bottom = 139.0
+
+[node name="tb" type="TextureButton" parent="ChooseLayer/logout"]
+layout_mode = 2
+texture_normal = ExtResource("3_6qhff")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="logout" type="Button" parent="ChooseLayer/logout"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "退出"
+flat = true
+
+[node name="scroll" type="ScrollContainer" parent="ChooseLayer"]
+offset_left = 198.0
+offset_top = 162.0
+offset_right = 1150.0
+offset_bottom = 672.0
+horizontal_scroll_mode = 3
+
+[node name="hbox" type="HBoxContainer" parent="ChooseLayer/scroll"]
+layout_mode = 2
+theme_override_constants/separation = 90
+
+[node name="1" type="Button" parent="ChooseLayer/scroll/hbox"]
+custom_minimum_size = Vector2(100, 400)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.576471, 0.27451, 0.611765, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_a4tn5")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = ExtResource("7_kli5u")
+theme_override_styles/hover = ExtResource("7_kli5u")
+theme_override_styles/pressed = ExtResource("7_kli5u")
+text = "字
+找
+字"
+
+[node name="2" type="Button" parent="ChooseLayer/scroll/hbox"]
+custom_minimum_size = Vector2(100, 400)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.576471, 0.27451, 0.611765, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_a4tn5")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = ExtResource("7_kli5u")
+theme_override_styles/hover = ExtResource("7_kli5u")
+theme_override_styles/pressed = ExtResource("7_kli5u")
+text = "连
+词"
+
+[node name="3" type="Button" parent="ChooseLayer/scroll/hbox"]
+custom_minimum_size = Vector2(100, 400)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.576471, 0.27451, 0.611765, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_a4tn5")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = ExtResource("7_kli5u")
+theme_override_styles/hover = ExtResource("7_kli5u")
+theme_override_styles/pressed = ExtResource("7_kli5u")
+text = "成
+语
+猜
+谜"
+
+[node name="4" type="Button" parent="ChooseLayer/scroll/hbox"]
+custom_minimum_size = Vector2(100, 400)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.576471, 0.27451, 0.611765, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_a4tn5")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = ExtResource("7_kli5u")
+theme_override_styles/hover = ExtResource("7_kli5u")
+theme_override_styles/pressed = ExtResource("7_kli5u")
+text = "联
+机
+pk
+
+猜
+词"
+
+[node name="settings" parent="." instance=ExtResource("7_domwl")]
+visible = false
+
+[node name="WordInWord" parent="." instance=ExtResource("8_csnaq")]
+visible = false
+
+[node name="LinkWord" parent="." instance=ExtResource("9_xvies")]
+visible = false
+
+[node name="GuessWord" parent="." instance=ExtResource("10_2ba2j")]
+visible = false
+
+[connection signal="pressed" from="ChooseLayer/setting/settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="ChooseLayer/logout/logout" to="." method="_on_logout_pressed"]
+[connection signal="pressed" from="ChooseLayer/scroll/hbox/1" to="." method="_on_open_game" binds= [1]]
+[connection signal="pressed" from="ChooseLayer/scroll/hbox/2" to="." method="_on_open_game" binds= [2]]
+[connection signal="pressed" from="ChooseLayer/scroll/hbox/3" to="." method="_on_open_game" binds= [3]]
+[connection signal="pressed" from="ChooseLayer/scroll/hbox/4" to="." method="_on_open_game" binds= [4]]
+[connection signal="music_change" from="settings" to="." method="_music_change"]
+[connection signal="out" from="settings" to="." method="_on_out"]
+[connection signal="out" from="WordInWord" to="." method="_on_out"]
+[connection signal="out" from="LinkWord" to="." method="_on_out"]
+[connection signal="out" from="GuessWord" to="." method="_on_out"]

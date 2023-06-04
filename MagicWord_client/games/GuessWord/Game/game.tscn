@@ -1,0 +1,220 @@
+[gd_scene load_steps=16 format=3 uid="uid://cm2bx32y64vo2"]
+
+[ext_resource type="Script" path="res://games/GuessWord/Game/game.gd" id="1_pdntp"]
+[ext_resource type="Texture2D" uid="uid://dxdl6vw4l7vct" path="res://asset/images/background/background3.png" id="2_cttpx"]
+[ext_resource type="Texture2D" uid="uid://drdpctfwkyj6x" path="res://asset/images/guessTitle.png" id="3_eis48"]
+[ext_resource type="StyleBox" uid="uid://c6rjuk2pl8tjq" path="res://asset/styles/tip.tres" id="3_jse86"]
+[ext_resource type="Texture2D" uid="uid://osofi2ro24oo" path="res://asset/images/guesswordDress.png" id="3_u6yie"]
+[ext_resource type="Texture2D" uid="uid://bxeryet285kxb" path="res://asset/images/btn_lanscape.png" id="4_0keid"]
+[ext_resource type="Texture2D" uid="uid://btre8thr7psfb" path="res://asset/images/textedit.png" id="4_muh6e"]
+[ext_resource type="Texture2D" uid="uid://mtkv1lasojk6" path="res://asset/images/cancel.png" id="5_1q6xd"]
+[ext_resource type="StyleBox" uid="uid://o1o3o7gb6laq" path="res://asset/styles/back.tres" id="5_u5ipb"]
+[ext_resource type="StyleBox" path="res://asset/styles/orange.tres" id="7_5eovg"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_35qta"]
+texture = ExtResource("3_u6yie")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o4uxw"]
+texture = ExtResource("4_muh6e")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ms46s"]
+texture = ExtResource("4_0keid")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qfkvr"]
+texture = ExtResource("5_1q6xd")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w1ypn"]
+texture = ExtResource("4_0keid")
+
+[node name="game" type="Node2D"]
+script = ExtResource("1_pdntp")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1284.0
+offset_bottom = 719.0
+texture = ExtResource("2_cttpx")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+offset_left = 31.0
+offset_top = 313.0
+offset_right = 227.0
+offset_bottom = 647.0
+texture = ExtResource("3_eis48")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="."]
+offset_left = 253.0
+offset_top = 25.0
+offset_right = 1171.0
+offset_bottom = 460.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_35qta")
+text = "白龙马走一线天 (打一成语) 
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="back" type="Button" parent="."]
+offset_left = 1138.0
+offset_top = 70.0
+offset_right = 1254.0
+offset_bottom = 180.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = ExtResource("5_u5ipb")
+theme_override_styles/hover = ExtResource("5_u5ipb")
+theme_override_styles/pressed = ExtResource("5_u5ipb")
+text = "退出"
+
+[node name="td1" type="TextEdit" parent="."]
+offset_left = 432.0
+offset_top = 526.0
+offset_right = 925.0
+offset_bottom = 617.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxTexture_o4uxw")
+placeholder_text = "请输入你的答案"
+
+[node name="tips" type="Button" parent="."]
+offset_left = 39.0
+offset_top = 60.0
+offset_right = 170.0
+offset_bottom = 180.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = ExtResource("5_u5ipb")
+theme_override_styles/hover = ExtResource("5_u5ipb")
+theme_override_styles/pressed = ExtResource("5_u5ipb")
+text = "提示"
+
+[node name="commit" type="Button" parent="."]
+offset_left = 1053.0
+offset_top = 550.0
+offset_right = 1168.0
+offset_bottom = 607.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = ExtResource("7_5eovg")
+text = "提交"
+
+[node name="tip_win" type="Panel" parent="."]
+visible = false
+offset_left = 3.0
+offset_top = 4.0
+offset_right = 1287.0
+offset_bottom = 724.0
+
+[node name="back" type="Button" parent="tip_win"]
+layout_mode = 0
+offset_left = 333.0
+offset_top = 161.0
+offset_right = 911.0
+offset_bottom = 464.0
+mouse_filter = 2
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = ExtResource("3_jse86")
+theme_override_styles/hover = ExtResource("3_jse86")
+text = "恭喜你找出谜底"
+
+[node name="tryAgain" type="Button" parent="tip_win"]
+layout_mode = 0
+offset_left = 375.0
+offset_top = 501.0
+offset_right = 586.0
+offset_bottom = 574.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_ms46s")
+text = "再试一次"
+
+[node name="next" type="Button" parent="tip_win"]
+layout_mode = 0
+offset_left = 660.0
+offset_top = 499.0
+offset_right = 871.0
+offset_bottom = 572.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_ms46s")
+text = "下一关
+"
+
+[node name="tip_prompt" type="Panel" parent="."]
+visible = false
+offset_left = 3.0
+offset_top = 4.0
+offset_right = 1287.0
+offset_bottom = 724.0
+
+[node name="back" type="Button" parent="tip_prompt"]
+layout_mode = 0
+offset_left = 333.0
+offset_top = 161.0
+offset_right = 911.0
+offset_bottom = 464.0
+mouse_filter = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("3_jse86")
+theme_override_styles/hover = ExtResource("3_jse86")
+text = "已经到最后一关了"
+
+[node name="cancel" type="Button" parent="tip_prompt"]
+layout_mode = 0
+offset_left = 952.0
+offset_top = 83.0
+offset_right = 1017.0
+offset_bottom = 147.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_qfkvr")
+
+[node name="tip_lose" type="Panel" parent="."]
+visible = false
+offset_left = 3.0
+offset_top = 4.0
+offset_right = 1287.0
+offset_bottom = 724.0
+
+[node name="back" type="Button" parent="tip_lose"]
+layout_mode = 0
+offset_left = 333.0
+offset_top = 161.0
+offset_right = 911.0
+offset_bottom = 464.0
+mouse_filter = 2
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = ExtResource("3_jse86")
+theme_override_styles/hover = ExtResource("3_jse86")
+text = "回答错误"
+
+[node name="tryAgain" type="Button" parent="tip_lose"]
+layout_mode = 0
+offset_left = 375.0
+offset_top = 501.0
+offset_right = 586.0
+offset_bottom = 574.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_w1ypn")
+text = "再试一次"
+
+[node name="out" type="Button" parent="tip_lose"]
+layout_mode = 0
+offset_left = 660.0
+offset_top = 499.0
+offset_right = 871.0
+offset_bottom = 572.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_w1ypn")
+text = "退出
+"
+
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="tips" to="." method="_on_tips_pressed"]
+[connection signal="pressed" from="commit" to="." method="_on_commit_pressed"]
+[connection signal="pressed" from="tip_win/tryAgain" to="." method="_on_try_again_pressed"]
+[connection signal="pressed" from="tip_win/next" to="." method="_on_next_pressed"]
+[connection signal="pressed" from="tip_prompt/cancel" to="." method="_on_cancel_pressed"]
+[connection signal="pressed" from="tip_lose/tryAgain" to="." method="_on_try_again_pressed"]
+[connection signal="pressed" from="tip_lose/out" to="." method="_on_back_pressed"]

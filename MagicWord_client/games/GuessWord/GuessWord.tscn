@@ -1,0 +1,277 @@
+[gd_scene load_steps=11 format=3 uid="uid://dtc8m35ww1lx8"]
+
+[ext_resource type="Script" path="res://games/GuessWord/GuessWord.gd" id="1_m5vsq"]
+[ext_resource type="Texture2D" uid="uid://q5floqjj05ag" path="res://asset/images/background/background2.png" id="2_b6kcq"]
+[ext_resource type="StyleBox" uid="uid://o1o3o7gb6laq" path="res://asset/styles/back.tres" id="3_e6tu7"]
+[ext_resource type="FontFile" uid="uid://bgfsm3sm3cfa3" path="res://asset/font/J032-鱼石行书.TTF" id="5_ysk14"]
+[ext_resource type="StyleBox" uid="uid://8g0v3lbfmj1f" path="res://asset/styles/btn_vertical.tres" id="6_6me26"]
+[ext_resource type="PackedScene" uid="uid://cm2bx32y64vo2" path="res://games/GuessWord/Game/game.tscn" id="7_mqoi0"]
+[ext_resource type="Texture2D" uid="uid://bpj72rq6vv1w6" path="res://asset/images/正确.png" id="7_vhlh5"]
+[ext_resource type="StyleBox" uid="uid://c6rjuk2pl8tjq" path="res://asset/styles/tip.tres" id="8_1ej6b"]
+[ext_resource type="Texture2D" uid="uid://mtkv1lasojk6" path="res://asset/images/cancel.png" id="9_e75ws"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qxcq1"]
+texture = ExtResource("9_e75ws")
+
+[node name="GuessWord" type="Node2D"]
+script = ExtResource("1_m5vsq")
+
+[node name="ChooseLayer" type="Node2D" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="ChooseLayer"]
+offset_left = 2.0
+offset_right = 1279.0
+offset_bottom = 718.0
+texture = ExtResource("2_b6kcq")
+expand_mode = 1
+
+[node name="Back" type="Button" parent="ChooseLayer"]
+offset_left = 1066.0
+offset_top = 66.0
+offset_right = 1162.0
+offset_bottom = 153.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = ExtResource("3_e6tu7")
+text = "返回"
+
+[node name="scroll" type="ScrollContainer" parent="ChooseLayer"]
+offset_left = 198.0
+offset_top = 162.0
+offset_right = 1150.0
+offset_bottom = 672.0
+horizontal_scroll_mode = 3
+
+[node name="hbox" type="HBoxContainer" parent="ChooseLayer/scroll"]
+layout_mode = 2
+theme_override_constants/separation = 90
+
+[node name="1" type="VBoxContainer" parent="ChooseLayer/scroll/hbox"]
+layout_mode = 2
+
+[node name="game" type="Button" parent="ChooseLayer/scroll/hbox/1"]
+custom_minimum_size = Vector2(100, 400)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0.415686, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.576471, 0.27451, 0.611765, 1)
+theme_override_fonts/font = ExtResource("5_ysk14")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = ExtResource("6_6me26")
+
+[node name="isWin" type="TextureButton" parent="ChooseLayer/scroll/hbox/1"]
+visible = false
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+texture_normal = ExtResource("7_vhlh5")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="2" type="VBoxContainer" parent="ChooseLayer/scroll/hbox"]
+layout_mode = 2
+
+[node name="game" type="Button" parent="ChooseLayer/scroll/hbox/2"]
+custom_minimum_size = Vector2(100, 400)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0.415686, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.576471, 0.27451, 0.611765, 1)
+theme_override_fonts/font = ExtResource("5_ysk14")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = ExtResource("6_6me26")
+
+[node name="isWin" type="TextureButton" parent="ChooseLayer/scroll/hbox/2"]
+visible = false
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+texture_normal = ExtResource("7_vhlh5")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="3" type="VBoxContainer" parent="ChooseLayer/scroll/hbox"]
+layout_mode = 2
+
+[node name="game" type="Button" parent="ChooseLayer/scroll/hbox/3"]
+custom_minimum_size = Vector2(100, 400)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0.415686, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.576471, 0.27451, 0.611765, 1)
+theme_override_fonts/font = ExtResource("5_ysk14")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = ExtResource("6_6me26")
+
+[node name="isWin" type="TextureButton" parent="ChooseLayer/scroll/hbox/3"]
+visible = false
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+texture_normal = ExtResource("7_vhlh5")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="4" type="VBoxContainer" parent="ChooseLayer/scroll/hbox"]
+layout_mode = 2
+
+[node name="game" type="Button" parent="ChooseLayer/scroll/hbox/4"]
+custom_minimum_size = Vector2(100, 400)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0.415686, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.576471, 0.27451, 0.611765, 1)
+theme_override_fonts/font = ExtResource("5_ysk14")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = ExtResource("6_6me26")
+
+[node name="isWin" type="TextureButton" parent="ChooseLayer/scroll/hbox/4"]
+visible = false
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+texture_normal = ExtResource("7_vhlh5")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="5" type="VBoxContainer" parent="ChooseLayer/scroll/hbox"]
+layout_mode = 2
+
+[node name="game" type="Button" parent="ChooseLayer/scroll/hbox/5"]
+custom_minimum_size = Vector2(100, 400)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0.415686, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.576471, 0.27451, 0.611765, 1)
+theme_override_fonts/font = ExtResource("5_ysk14")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = ExtResource("6_6me26")
+
+[node name="isWin" type="TextureButton" parent="ChooseLayer/scroll/hbox/5"]
+visible = false
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+texture_normal = ExtResource("7_vhlh5")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="6" type="VBoxContainer" parent="ChooseLayer/scroll/hbox"]
+layout_mode = 2
+
+[node name="game" type="Button" parent="ChooseLayer/scroll/hbox/6"]
+custom_minimum_size = Vector2(100, 400)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0.415686, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.576471, 0.27451, 0.611765, 1)
+theme_override_fonts/font = ExtResource("5_ysk14")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = ExtResource("6_6me26")
+
+[node name="isWin" type="TextureButton" parent="ChooseLayer/scroll/hbox/6"]
+visible = false
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+texture_normal = ExtResource("7_vhlh5")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="7" type="VBoxContainer" parent="ChooseLayer/scroll/hbox"]
+layout_mode = 2
+
+[node name="game" type="Button" parent="ChooseLayer/scroll/hbox/7"]
+custom_minimum_size = Vector2(100, 400)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0.415686, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.576471, 0.27451, 0.611765, 1)
+theme_override_fonts/font = ExtResource("5_ysk14")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = ExtResource("6_6me26")
+
+[node name="isWin" type="TextureButton" parent="ChooseLayer/scroll/hbox/7"]
+visible = false
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+texture_normal = ExtResource("7_vhlh5")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="8" type="VBoxContainer" parent="ChooseLayer/scroll/hbox"]
+layout_mode = 2
+
+[node name="game" type="Button" parent="ChooseLayer/scroll/hbox/8"]
+custom_minimum_size = Vector2(100, 400)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0.415686, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.576471, 0.27451, 0.611765, 1)
+theme_override_fonts/font = ExtResource("5_ysk14")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = ExtResource("6_6me26")
+
+[node name="isWin" type="TextureButton" parent="ChooseLayer/scroll/hbox/8"]
+visible = false
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+texture_normal = ExtResource("7_vhlh5")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="game" parent="." instance=ExtResource("7_mqoi0")]
+visible = false
+
+[node name="tip_prompt" type="Panel" parent="."]
+visible = false
+offset_left = 3.0
+offset_top = 4.0
+offset_right = 1287.0
+offset_bottom = 724.0
+
+[node name="back" type="Button" parent="tip_prompt"]
+layout_mode = 0
+offset_left = 333.0
+offset_top = 161.0
+offset_right = 911.0
+offset_bottom = 464.0
+mouse_filter = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("8_1ej6b")
+theme_override_styles/hover = ExtResource("8_1ej6b")
+text = "已经到最后一关了"
+
+[node name="cancel" type="Button" parent="tip_prompt"]
+layout_mode = 0
+offset_left = 952.0
+offset_top = 83.0
+offset_right = 1017.0
+offset_bottom = 147.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_qxcq1")
+
+[node name="test" type="Button" parent="."]
+visible = false
+offset_left = 566.0
+offset_top = 54.0
+offset_right = 706.0
+offset_bottom = 126.0
+text = "清零"
+
+[connection signal="game_info" from="." to="game" method="_init_screen"]
+[connection signal="pressed" from="ChooseLayer/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="ChooseLayer/scroll/hbox/1/game" to="." method="_open_game" binds= [1]]
+[connection signal="pressed" from="ChooseLayer/scroll/hbox/2/game" to="." method="_open_game" binds= [2]]
+[connection signal="pressed" from="ChooseLayer/scroll/hbox/3/game" to="." method="_open_game" binds= [3]]
+[connection signal="pressed" from="ChooseLayer/scroll/hbox/4/game" to="." method="_open_game" binds= [4]]
+[connection signal="pressed" from="ChooseLayer/scroll/hbox/5/game" to="." method="_open_game" binds= [5]]
+[connection signal="pressed" from="ChooseLayer/scroll/hbox/6/game" to="." method="_open_game" binds= [6]]
+[connection signal="pressed" from="ChooseLayer/scroll/hbox/7/game" to="." method="_open_game" binds= [7]]
+[connection signal="pressed" from="ChooseLayer/scroll/hbox/8/game" to="." method="_open_game" binds= [8]]
+[connection signal="next" from="game" to="." method="_open_game"]
+[connection signal="out" from="game" to="." method="_out_game"]
+[connection signal="win" from="game" to="." method="_update_win"]
+[connection signal="pressed" from="tip_prompt/cancel" to="." method="_on_cancel_pressed"]
+[connection signal="pressed" from="test" to="." method="_on_test_pressed"]

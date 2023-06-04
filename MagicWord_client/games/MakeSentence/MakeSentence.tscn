@@ -1,0 +1,173 @@
+[gd_scene load_steps=3 format=3 uid="uid://b481hn7kdmwxj"]
+
+[ext_resource type="Script" path="res://games/MakeSentence/MakeSentence.gd" id="1_ftjjc"]
+
+[sub_resource type="GDScript" id="GDScript_o8qtc"]
+script/source = "extends ScrollContainer
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
+
+[node name="LinkWords" type="Node2D"]
+script = ExtResource("1_ftjjc")
+
+[node name="Back" type="Button" parent="."]
+offset_left = 1091.0
+offset_top = 57.0
+offset_right = 1216.0
+offset_bottom = 116.0
+text = "返回"
+
+[node name="tips" type="Button" parent="."]
+offset_left = 95.0
+offset_top = 60.0
+offset_right = 220.0
+offset_bottom = 119.0
+text = "提示"
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 17.0
+offset_top = 106.0
+offset_right = 17.0
+offset_bottom = 106.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel"]
+layout_mode = 0
+offset_left = 169.0
+offset_top = 131.0
+offset_right = 1101.0
+offset_bottom = 476.0
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 0
+script = SubResource("GDScript_o8qtc")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/ScrollContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="Panel/ScrollContainer/HBoxContainer"]
+custom_minimum_size = Vector2(80, 300)
+layout_mode = 2
+mouse_filter = 1
+text = "afaaga"
+
+[node name="Button12" type="Button" parent="Panel/ScrollContainer/HBoxContainer"]
+custom_minimum_size = Vector2(80, 300)
+layout_mode = 2
+mouse_filter = 1
+text = "afaaga"
+
+[node name="Button13" type="Button" parent="Panel/ScrollContainer/HBoxContainer"]
+custom_minimum_size = Vector2(80, 300)
+layout_mode = 2
+mouse_filter = 1
+text = "afaaga"
+
+[node name="Button14" type="Button" parent="Panel/ScrollContainer/HBoxContainer"]
+custom_minimum_size = Vector2(80, 300)
+layout_mode = 2
+mouse_filter = 1
+text = "afaaga"
+
+[node name="Button15" type="Button" parent="Panel/ScrollContainer/HBoxContainer"]
+custom_minimum_size = Vector2(80, 300)
+layout_mode = 2
+mouse_filter = 1
+text = "afaaga"
+
+[node name="Button16" type="Button" parent="Panel/ScrollContainer/HBoxContainer"]
+custom_minimum_size = Vector2(80, 300)
+layout_mode = 2
+mouse_filter = 1
+text = "afaaga"
+
+[node name="Button17" type="Button" parent="Panel/ScrollContainer/HBoxContainer"]
+custom_minimum_size = Vector2(80, 300)
+layout_mode = 2
+mouse_filter = 1
+text = "afaaga"
+
+[node name="Button18" type="Button" parent="Panel/ScrollContainer/HBoxContainer"]
+custom_minimum_size = Vector2(80, 300)
+layout_mode = 2
+mouse_filter = 1
+text = "afaaga"
+
+[node name="Button2" type="Button" parent="Panel/ScrollContainer/HBoxContainer"]
+custom_minimum_size = Vector2(80, 300)
+layout_mode = 2
+mouse_filter = 1
+text = "afaaga"
+
+[node name="Button3" type="Button" parent="Panel/ScrollContainer/HBoxContainer"]
+custom_minimum_size = Vector2(80, 300)
+layout_mode = 2
+mouse_filter = 1
+text = "afaaga"
+
+[node name="Button4" type="Button" parent="Panel/ScrollContainer/HBoxContainer"]
+custom_minimum_size = Vector2(80, 300)
+layout_mode = 2
+mouse_filter = 1
+text = "afaaga"
+
+[node name="Button5" type="Button" parent="Panel/ScrollContainer/HBoxContainer"]
+custom_minimum_size = Vector2(80, 300)
+layout_mode = 2
+mouse_filter = 1
+text = "afaaga"
+
+[node name="Button6" type="Button" parent="Panel/ScrollContainer/HBoxContainer"]
+custom_minimum_size = Vector2(80, 300)
+layout_mode = 2
+mouse_filter = 1
+text = "afaaga"
+
+[node name="Button7" type="Button" parent="Panel/ScrollContainer/HBoxContainer"]
+custom_minimum_size = Vector2(80, 300)
+layout_mode = 2
+mouse_filter = 1
+text = "afaaga"
+
+[node name="Button8" type="Button" parent="Panel/ScrollContainer/HBoxContainer"]
+custom_minimum_size = Vector2(80, 300)
+layout_mode = 2
+mouse_filter = 1
+text = "afaaga"
+
+[node name="Button9" type="Button" parent="Panel/ScrollContainer/HBoxContainer"]
+custom_minimum_size = Vector2(80, 300)
+layout_mode = 2
+mouse_filter = 1
+text = "afaaga"
+
+[node name="Button10" type="Button" parent="Panel/ScrollContainer/HBoxContainer"]
+custom_minimum_size = Vector2(80, 300)
+layout_mode = 2
+mouse_filter = 1
+text = "afaaga"
+
+[node name="Button11" type="Button" parent="Panel/ScrollContainer/HBoxContainer"]
+custom_minimum_size = Vector2(80, 300)
+layout_mode = 2
+mouse_filter = 1
+text = "afaaga"
+
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="tips" to="." method="_on_back_pressed"]
+[connection signal="gui_input" from="Panel/ScrollContainer" to="Panel/ScrollContainer" method="_on_gui_input"]
+[connection signal="pressed" from="Panel/ScrollContainer/HBoxContainer/Button" to="." method="_on_back_pressed"]

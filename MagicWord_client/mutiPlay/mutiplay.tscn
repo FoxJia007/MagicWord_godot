@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://4w10rc8t8au0"]
+
+[ext_resource type="Script" path="res://mutiPlay/mutiplay.gd" id="1_72bye"]
+[ext_resource type="PackedScene" uid="uid://bofa5gbtdv4ai" path="res://mutiPlay/game.tscn" id="2_63g13"]
+[ext_resource type="PackedScene" uid="uid://uggv27vswijl" path="res://mutiPlay/userInfo.tscn" id="3_p5kl1"]
+
+[node name="mutiplay" type="Node2D"]
+script = ExtResource("1_72bye")
+
+[node name="Game" parent="." instance=ExtResource("2_63g13")]
+
+[node name="UserInfo" parent="." instance=ExtResource("3_p5kl1")]
+
+[connection signal="logOut" from="." to="UserInfo" method="_logOut_pressed"]
+[connection signal="start_info" from="." to="Game" method="_init_info"]
+[connection signal="Restart" from="Game" to="." method="_init_start_game"]
+[connection signal="out" from="Game" to="." method="_on_game_out"]
+[connection signal="isLoginOk" from="UserInfo" to="." method="_init_start_game"]

@@ -1,0 +1,1248 @@
+[gd_scene load_steps=14 format=3 uid="uid://cj4b6i3uuwsxd"]
+
+[ext_resource type="Script" path="res://games/LinkWord/game/game.gd" id="1_gntj4"]
+[ext_resource type="Texture2D" uid="uid://dxdl6vw4l7vct" path="res://asset/images/background/background3.png" id="2_kvv5u"]
+[ext_resource type="StyleBox" uid="uid://o1o3o7gb6laq" path="res://asset/styles/back.tres" id="3_150d4"]
+[ext_resource type="StyleBox" uid="uid://qalpshbe3yv7" path="res://asset/styles/blue.tres" id="4_aql5y"]
+[ext_resource type="Script" path="res://games/LinkWord/btn.gd" id="5_e8e70"]
+[ext_resource type="StyleBox" uid="uid://c6rjuk2pl8tjq" path="res://asset/styles/tip.tres" id="6_4g2q4"]
+[ext_resource type="Texture2D" uid="uid://mtkv1lasojk6" path="res://asset/images/cancel.png" id="7_sgt6v"]
+[ext_resource type="Texture2D" uid="uid://dfrnqcusb276d" path="res://asset/images/tip2.png" id="8_xcsis"]
+[ext_resource type="Texture2D" uid="uid://bxeryet285kxb" path="res://asset/images/btn_lanscape.png" id="9_f4mbr"]
+[ext_resource type="Texture2D" uid="uid://bxywupkj70ywv" path="res://asset/images/clock.png" id="10_xora6"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pojmt"]
+texture = ExtResource("7_sgt6v")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f5ph7"]
+texture = ExtResource("8_xcsis")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2ymtk"]
+texture = ExtResource("9_f4mbr")
+
+[node name="game2" type="Node2D"]
+script = ExtResource("1_gntj4")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1284.0
+offset_bottom = 719.0
+texture = ExtResource("2_kvv5u")
+
+[node name="back" type="Button" parent="."]
+offset_left = 1067.0
+offset_top = 75.0
+offset_right = 1183.0
+offset_bottom = 185.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = ExtResource("3_150d4")
+theme_override_styles/hover = ExtResource("3_150d4")
+theme_override_styles/pressed = ExtResource("3_150d4")
+text = "退出"
+
+[node name="tips" type="Button" parent="."]
+offset_left = 39.0
+offset_top = 60.0
+offset_right = 155.0
+offset_bottom = 170.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = ExtResource("3_150d4")
+theme_override_styles/hover = ExtResource("3_150d4")
+theme_override_styles/pressed = ExtResource("3_150d4")
+text = "提示"
+
+[node name="Words" type="GridContainer" parent="."]
+offset_left = 179.0
+offset_top = 112.0
+offset_right = 687.0
+offset_bottom = 620.0
+size_flags_horizontal = 0
+columns = 8
+
+[node name="0" type="Button" parent="Words"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("4_aql5y")
+action_mode = 0
+text = "我
+"
+script = ExtResource("5_e8e70")
+
+[node name="1" type="Button" parent="Words"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("4_aql5y")
+action_mode = 0
+text = "我
+"
+script = ExtResource("5_e8e70")
+
+[node name="2" type="Button" parent="Words"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("4_aql5y")
+action_mode = 0
+text = "我
+"
+script = ExtResource("5_e8e70")
+
+[node name="3" type="Button" parent="Words"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("4_aql5y")
+action_mode = 0
+text = "我
+"
+script = ExtResource("5_e8e70")
+
+[node name="4" type="Button" parent="Words"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("4_aql5y")
+action_mode = 0
+text = "我
+"
+script = ExtResource("5_e8e70")
+
+[node name="5" type="Button" parent="Words"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("4_aql5y")
+action_mode = 0
+text = "我
+"
+script = ExtResource("5_e8e70")
+
+[node name="6" type="Button" parent="Words"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("4_aql5y")
+action_mode = 0
+text = "我
+"
+script = ExtResource("5_e8e70")
+
+[node name="7" type="Button" parent="Words"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("4_aql5y")
+action_mode = 0
+text = "我
+"
+script = ExtResource("5_e8e70")
+
+[node name="8" type="Button" parent="Words"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("4_aql5y")
+action_mode = 0
+text = "我
+"
+script = ExtResource("5_e8e70")
+
+[node name="9" type="Button" parent="Words"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("4_aql5y")
+action_mode = 0
+text = "我
+"
+script = ExtResource("5_e8e70")
+
+[node name="10" type="Button" parent="Words"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("4_aql5y")
+action_mode = 0
+text = "我
+"
+script = ExtResource("5_e8e70")
+
+[node name="11" type="Button" parent="Words"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("4_aql5y")
+action_mode = 0
+text = "我
+"
+script = ExtResource("5_e8e70")
+
+[node name="12" type="Button" parent="Words"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("4_aql5y")
+action_mode = 0
+text = "我
+"
+script = ExtResource("5_e8e70")
+
+[node name="13" type="Button" parent="Words"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("4_aql5y")
+action_mode = 0
+text = "我
+"
+script = ExtResource("5_e8e70")
+
+[node name="14" type="Button" parent="Words"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("4_aql5y")
+action_mode = 0
+text = "我
+"
+script = ExtResource("5_e8e70")
+
+[node name="15" type="Button" parent="Words"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("4_aql5y")
+action_mode = 0
+text = "我
+"
+script = ExtResource("5_e8e70")
+
+[node name="16" type="Button" parent="Words"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("4_aql5y")
+action_mode = 0
+text = "我
+"
+script = ExtResource("5_e8e70")
+
+[node name="17" type="Button" parent="Words"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("4_aql5y")
+action_mode = 0
+text = "我
+"
+script = ExtResource("5_e8e70")
+
+[node name="18" type="Button" parent="Words"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("4_aql5y")
+action_mode = 0
+text = "我
+"
+script = ExtResource("5_e8e70")
+
+[node name="19" type="Button" parent="Words"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("4_aql5y")
+action_mode = 0
+text = "我
+"
+script = ExtResource("5_e8e70")
+
+[node name="20" type="Button" parent="Words"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("4_aql5y")
+action_mode = 0
+text = "我
+"
+script = ExtResource("5_e8e70")
+
+[node name="21" type="Button" parent="Words"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("4_aql5y")
+action_mode = 0
+text = "我
+"
+script = ExtResource("5_e8e70")
+
+[node name="22" type="Button" parent="Words"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("4_aql5y")
+action_mode = 0
+text = "我
+"
+script = ExtResource("5_e8e70")
+
+[node name="23" type="Button" parent="Words"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("4_aql5y")
+action_mode = 0
+text = "我
+"
+script = ExtResource("5_e8e70")
+
+[node name="24" type="Button" parent="Words"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("4_aql5y")
+action_mode = 0
+text = "我
+"
+script = ExtResource("5_e8e70")
+
+[node name="25" type="Button" parent="Words"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("4_aql5y")
+action_mode = 0
+text = "我
+"
+script = ExtResource("5_e8e70")
+
+[node name="26" type="Button" parent="Words"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("4_aql5y")
+action_mode = 0
+text = "我
+"
+script = ExtResource("5_e8e70")
+
+[node name="27" type="Button" parent="Words"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("4_aql5y")
+action_mode = 0
+text = "我
+"
+script = ExtResource("5_e8e70")
+
+[node name="28" type="Button" parent="Words"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("4_aql5y")
+action_mode = 0
+text = "我
+"
+script = ExtResource("5_e8e70")
+
+[node name="29" type="Button" parent="Words"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("4_aql5y")
+action_mode = 0
+text = "我
+"
+script = ExtResource("5_e8e70")
+
+[node name="30" type="Button" parent="Words"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("4_aql5y")
+action_mode = 0
+text = "我
+"
+script = ExtResource("5_e8e70")
+
+[node name="31" type="Button" parent="Words"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("4_aql5y")
+action_mode = 0
+text = "我
+"
+script = ExtResource("5_e8e70")
+
+[node name="32" type="Button" parent="Words"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("4_aql5y")
+action_mode = 0
+text = "我
+"
+script = ExtResource("5_e8e70")
+
+[node name="33" type="Button" parent="Words"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("4_aql5y")
+action_mode = 0
+text = "我
+"
+script = ExtResource("5_e8e70")
+
+[node name="34" type="Button" parent="Words"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("4_aql5y")
+action_mode = 0
+text = "我
+"
+script = ExtResource("5_e8e70")
+
+[node name="35" type="Button" parent="Words"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("4_aql5y")
+action_mode = 0
+text = "我
+"
+script = ExtResource("5_e8e70")
+
+[node name="36" type="Button" parent="Words"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("4_aql5y")
+action_mode = 0
+text = "我
+"
+script = ExtResource("5_e8e70")
+
+[node name="37" type="Button" parent="Words"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("4_aql5y")
+action_mode = 0
+text = "我
+"
+script = ExtResource("5_e8e70")
+
+[node name="38" type="Button" parent="Words"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("4_aql5y")
+action_mode = 0
+text = "我
+"
+script = ExtResource("5_e8e70")
+
+[node name="39" type="Button" parent="Words"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("4_aql5y")
+action_mode = 0
+text = "我
+"
+script = ExtResource("5_e8e70")
+
+[node name="40" type="Button" parent="Words"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("4_aql5y")
+action_mode = 0
+text = "我
+"
+script = ExtResource("5_e8e70")
+
+[node name="41" type="Button" parent="Words"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("4_aql5y")
+action_mode = 0
+text = "我
+"
+script = ExtResource("5_e8e70")
+
+[node name="42" type="Button" parent="Words"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("4_aql5y")
+action_mode = 0
+text = "我
+"
+script = ExtResource("5_e8e70")
+
+[node name="43" type="Button" parent="Words"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("4_aql5y")
+action_mode = 0
+text = "我
+"
+script = ExtResource("5_e8e70")
+
+[node name="44" type="Button" parent="Words"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("4_aql5y")
+action_mode = 0
+text = "我
+"
+script = ExtResource("5_e8e70")
+
+[node name="45" type="Button" parent="Words"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("4_aql5y")
+action_mode = 0
+text = "我
+"
+script = ExtResource("5_e8e70")
+
+[node name="46" type="Button" parent="Words"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("4_aql5y")
+action_mode = 0
+text = "我
+"
+script = ExtResource("5_e8e70")
+
+[node name="47" type="Button" parent="Words"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("4_aql5y")
+action_mode = 0
+text = "我
+"
+script = ExtResource("5_e8e70")
+
+[node name="48" type="Button" parent="Words"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("4_aql5y")
+action_mode = 0
+text = "我
+"
+script = ExtResource("5_e8e70")
+
+[node name="49" type="Button" parent="Words"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("4_aql5y")
+action_mode = 0
+text = "我
+"
+script = ExtResource("5_e8e70")
+
+[node name="50" type="Button" parent="Words"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("4_aql5y")
+action_mode = 0
+text = "我
+"
+script = ExtResource("5_e8e70")
+
+[node name="51" type="Button" parent="Words"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("4_aql5y")
+action_mode = 0
+text = "我
+"
+script = ExtResource("5_e8e70")
+
+[node name="52" type="Button" parent="Words"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("4_aql5y")
+action_mode = 0
+text = "我
+"
+script = ExtResource("5_e8e70")
+
+[node name="53" type="Button" parent="Words"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("4_aql5y")
+action_mode = 0
+text = "我
+"
+script = ExtResource("5_e8e70")
+
+[node name="54" type="Button" parent="Words"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("4_aql5y")
+action_mode = 0
+text = "我
+"
+script = ExtResource("5_e8e70")
+
+[node name="55" type="Button" parent="Words"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("4_aql5y")
+action_mode = 0
+text = "我
+"
+script = ExtResource("5_e8e70")
+
+[node name="56" type="Button" parent="Words"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("4_aql5y")
+action_mode = 0
+text = "我
+"
+script = ExtResource("5_e8e70")
+
+[node name="57" type="Button" parent="Words"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("4_aql5y")
+action_mode = 0
+text = "我
+"
+script = ExtResource("5_e8e70")
+
+[node name="58" type="Button" parent="Words"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("4_aql5y")
+action_mode = 0
+text = "我
+"
+script = ExtResource("5_e8e70")
+
+[node name="59" type="Button" parent="Words"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("4_aql5y")
+action_mode = 0
+text = "我
+"
+script = ExtResource("5_e8e70")
+
+[node name="60" type="Button" parent="Words"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("4_aql5y")
+action_mode = 0
+text = "我
+"
+script = ExtResource("5_e8e70")
+
+[node name="61" type="Button" parent="Words"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("4_aql5y")
+action_mode = 0
+text = "我
+"
+script = ExtResource("5_e8e70")
+
+[node name="62" type="Button" parent="Words"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("4_aql5y")
+action_mode = 0
+text = "我
+"
+script = ExtResource("5_e8e70")
+
+[node name="63" type="Button" parent="Words"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("4_aql5y")
+action_mode = 0
+text = "我
+"
+script = ExtResource("5_e8e70")
+
+[node name="tip_prompt" type="Panel" parent="."]
+visible = false
+offset_left = 3.0
+offset_top = 4.0
+offset_right = 1287.0
+offset_bottom = 724.0
+
+[node name="back" type="Button" parent="tip_prompt"]
+layout_mode = 0
+offset_left = 333.0
+offset_top = 161.0
+offset_right = 911.0
+offset_bottom = 464.0
+mouse_filter = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("6_4g2q4")
+theme_override_styles/hover = ExtResource("6_4g2q4")
+text = "丨一二十亖..."
+
+[node name="cancel" type="Button" parent="tip_prompt"]
+layout_mode = 0
+offset_left = 952.0
+offset_top = 83.0
+offset_right = 1017.0
+offset_bottom = 147.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_pojmt")
+
+[node name="tip_poems" type="Panel" parent="."]
+visible = false
+offset_left = 768.0
+offset_top = 372.0
+offset_right = 1164.0
+offset_bottom = 609.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_f5ph7")
+
+[node name="l1" type="Label" parent="tip_poems"]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 41.0
+offset_right = 266.0
+offset_bottom = 125.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "夜来风雨声
+花落知多少"
+
+[node name="l2" type="Label" parent="tip_poems"]
+layout_mode = 0
+offset_left = 180.0
+offset_top = 125.0
+offset_right = 342.0
+offset_bottom = 175.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "——《春晓 》"
+
+[node name="tip_lose" type="Panel" parent="."]
+visible = false
+offset_left = 3.0
+offset_top = 4.0
+offset_right = 1287.0
+offset_bottom = 724.0
+
+[node name="back" type="Button" parent="tip_lose"]
+layout_mode = 0
+offset_left = 333.0
+offset_top = 161.0
+offset_right = 911.0
+offset_bottom = 464.0
+mouse_filter = 2
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = ExtResource("6_4g2q4")
+theme_override_styles/hover = ExtResource("6_4g2q4")
+text = "时间到"
+
+[node name="tryAgain" type="Button" parent="tip_lose"]
+layout_mode = 0
+offset_left = 375.0
+offset_top = 501.0
+offset_right = 586.0
+offset_bottom = 574.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_2ymtk")
+text = "再试一次"
+
+[node name="out" type="Button" parent="tip_lose"]
+layout_mode = 0
+offset_left = 660.0
+offset_top = 499.0
+offset_right = 871.0
+offset_bottom = 572.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_2ymtk")
+text = "退出
+"
+
+[node name="tip_win" type="Panel" parent="."]
+visible = false
+offset_left = 3.0
+offset_top = 4.0
+offset_right = 1287.0
+offset_bottom = 724.0
+
+[node name="back" type="Button" parent="tip_win"]
+layout_mode = 0
+offset_left = 333.0
+offset_top = 161.0
+offset_right = 911.0
+offset_bottom = 464.0
+mouse_filter = 2
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = ExtResource("6_4g2q4")
+theme_override_styles/hover = ExtResource("6_4g2q4")
+text = "恭喜找出
+所有字"
+
+[node name="tryAgain" type="Button" parent="tip_win"]
+layout_mode = 0
+offset_left = 375.0
+offset_top = 501.0
+offset_right = 586.0
+offset_bottom = 574.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_2ymtk")
+text = "再试一次"
+
+[node name="next" type="Button" parent="tip_win"]
+layout_mode = 0
+offset_left = 660.0
+offset_top = 499.0
+offset_right = 871.0
+offset_bottom = 572.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_2ymtk")
+text = "下一关
+"
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="time" type="Button" parent="."]
+offset_left = 772.0
+offset_top = 81.0
+offset_right = 937.0
+offset_bottom = 150.0
+theme_override_colors/font_color = Color(0.878431, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "60"
+icon = ExtResource("10_xora6")
+flat = true
+expand_icon = true
+
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="tips" to="." method="_on_tips_pressed"]
+[connection signal="gui_input" from="Words" to="." method="_on_pressed_start"]
+[connection signal="exp" from="Words/0" to="." method="_pressed"]
+[connection signal="mouse_entered" from="Words/0" to="Words/0" method="_on_mouse_entered"]
+[connection signal="pressed" from="Words/0" to="Words/0" method="_on_pressed"]
+[connection signal="exp" from="Words/1" to="." method="_pressed"]
+[connection signal="mouse_entered" from="Words/1" to="Words/1" method="_on_mouse_entered"]
+[connection signal="pressed" from="Words/1" to="Words/1" method="_on_pressed"]
+[connection signal="exp" from="Words/2" to="." method="_pressed"]
+[connection signal="mouse_entered" from="Words/2" to="Words/2" method="_on_mouse_entered"]
+[connection signal="pressed" from="Words/2" to="Words/2" method="_on_pressed"]
+[connection signal="exp" from="Words/3" to="." method="_pressed"]
+[connection signal="mouse_entered" from="Words/3" to="Words/3" method="_on_mouse_entered"]
+[connection signal="pressed" from="Words/3" to="Words/3" method="_on_pressed"]
+[connection signal="exp" from="Words/4" to="." method="_pressed"]
+[connection signal="mouse_entered" from="Words/4" to="Words/4" method="_on_mouse_entered"]
+[connection signal="pressed" from="Words/4" to="Words/4" method="_on_pressed"]
+[connection signal="exp" from="Words/5" to="." method="_pressed"]
+[connection signal="mouse_entered" from="Words/5" to="Words/5" method="_on_mouse_entered"]
+[connection signal="pressed" from="Words/5" to="Words/5" method="_on_pressed"]
+[connection signal="exp" from="Words/6" to="." method="_pressed"]
+[connection signal="mouse_entered" from="Words/6" to="Words/6" method="_on_mouse_entered"]
+[connection signal="pressed" from="Words/6" to="Words/6" method="_on_pressed"]
+[connection signal="exp" from="Words/7" to="." method="_pressed"]
+[connection signal="mouse_entered" from="Words/7" to="Words/7" method="_on_mouse_entered"]
+[connection signal="pressed" from="Words/7" to="Words/7" method="_on_pressed"]
+[connection signal="exp" from="Words/8" to="." method="_pressed"]
+[connection signal="mouse_entered" from="Words/8" to="Words/8" method="_on_mouse_entered"]
+[connection signal="pressed" from="Words/8" to="Words/8" method="_on_pressed"]
+[connection signal="exp" from="Words/9" to="." method="_pressed"]
+[connection signal="mouse_entered" from="Words/9" to="Words/9" method="_on_mouse_entered"]
+[connection signal="pressed" from="Words/9" to="Words/9" method="_on_pressed"]
+[connection signal="exp" from="Words/10" to="." method="_pressed"]
+[connection signal="mouse_entered" from="Words/10" to="Words/10" method="_on_mouse_entered"]
+[connection signal="pressed" from="Words/10" to="Words/10" method="_on_pressed"]
+[connection signal="exp" from="Words/11" to="." method="_pressed"]
+[connection signal="mouse_entered" from="Words/11" to="Words/11" method="_on_mouse_entered"]
+[connection signal="pressed" from="Words/11" to="Words/11" method="_on_pressed"]
+[connection signal="exp" from="Words/12" to="." method="_pressed"]
+[connection signal="mouse_entered" from="Words/12" to="Words/12" method="_on_mouse_entered"]
+[connection signal="pressed" from="Words/12" to="Words/12" method="_on_pressed"]
+[connection signal="exp" from="Words/13" to="." method="_pressed"]
+[connection signal="mouse_entered" from="Words/13" to="Words/13" method="_on_mouse_entered"]
+[connection signal="pressed" from="Words/13" to="Words/13" method="_on_pressed"]
+[connection signal="exp" from="Words/14" to="." method="_pressed"]
+[connection signal="mouse_entered" from="Words/14" to="Words/14" method="_on_mouse_entered"]
+[connection signal="pressed" from="Words/14" to="Words/14" method="_on_pressed"]
+[connection signal="exp" from="Words/15" to="." method="_pressed"]
+[connection signal="mouse_entered" from="Words/15" to="Words/15" method="_on_mouse_entered"]
+[connection signal="pressed" from="Words/15" to="Words/15" method="_on_pressed"]
+[connection signal="exp" from="Words/16" to="." method="_pressed"]
+[connection signal="mouse_entered" from="Words/16" to="Words/16" method="_on_mouse_entered"]
+[connection signal="pressed" from="Words/16" to="Words/16" method="_on_pressed"]
+[connection signal="exp" from="Words/17" to="." method="_pressed"]
+[connection signal="mouse_entered" from="Words/17" to="Words/17" method="_on_mouse_entered"]
+[connection signal="pressed" from="Words/17" to="Words/17" method="_on_pressed"]
+[connection signal="exp" from="Words/18" to="." method="_pressed"]
+[connection signal="mouse_entered" from="Words/18" to="Words/18" method="_on_mouse_entered"]
+[connection signal="pressed" from="Words/18" to="Words/18" method="_on_pressed"]
+[connection signal="exp" from="Words/19" to="." method="_pressed"]
+[connection signal="mouse_entered" from="Words/19" to="Words/19" method="_on_mouse_entered"]
+[connection signal="pressed" from="Words/19" to="Words/19" method="_on_pressed"]
+[connection signal="exp" from="Words/20" to="." method="_pressed"]
+[connection signal="mouse_entered" from="Words/20" to="Words/20" method="_on_mouse_entered"]
+[connection signal="pressed" from="Words/20" to="Words/20" method="_on_pressed"]
+[connection signal="exp" from="Words/21" to="." method="_pressed"]
+[connection signal="mouse_entered" from="Words/21" to="Words/21" method="_on_mouse_entered"]
+[connection signal="pressed" from="Words/21" to="Words/21" method="_on_pressed"]
+[connection signal="exp" from="Words/22" to="." method="_pressed"]
+[connection signal="mouse_entered" from="Words/22" to="Words/22" method="_on_mouse_entered"]
+[connection signal="pressed" from="Words/22" to="Words/22" method="_on_pressed"]
+[connection signal="exp" from="Words/23" to="." method="_pressed"]
+[connection signal="mouse_entered" from="Words/23" to="Words/23" method="_on_mouse_entered"]
+[connection signal="pressed" from="Words/23" to="Words/23" method="_on_pressed"]
+[connection signal="exp" from="Words/24" to="." method="_pressed"]
+[connection signal="mouse_entered" from="Words/24" to="Words/24" method="_on_mouse_entered"]
+[connection signal="pressed" from="Words/24" to="Words/24" method="_on_pressed"]
+[connection signal="exp" from="Words/25" to="." method="_pressed"]
+[connection signal="mouse_entered" from="Words/25" to="Words/25" method="_on_mouse_entered"]
+[connection signal="pressed" from="Words/25" to="Words/25" method="_on_pressed"]
+[connection signal="exp" from="Words/26" to="." method="_pressed"]
+[connection signal="mouse_entered" from="Words/26" to="Words/26" method="_on_mouse_entered"]
+[connection signal="pressed" from="Words/26" to="Words/26" method="_on_pressed"]
+[connection signal="exp" from="Words/27" to="." method="_pressed"]
+[connection signal="mouse_entered" from="Words/27" to="Words/27" method="_on_mouse_entered"]
+[connection signal="pressed" from="Words/27" to="Words/27" method="_on_pressed"]
+[connection signal="exp" from="Words/28" to="." method="_pressed"]
+[connection signal="mouse_entered" from="Words/28" to="Words/28" method="_on_mouse_entered"]
+[connection signal="pressed" from="Words/28" to="Words/28" method="_on_pressed"]
+[connection signal="exp" from="Words/29" to="." method="_pressed"]
+[connection signal="mouse_entered" from="Words/29" to="Words/29" method="_on_mouse_entered"]
+[connection signal="pressed" from="Words/29" to="Words/29" method="_on_pressed"]
+[connection signal="exp" from="Words/30" to="." method="_pressed"]
+[connection signal="mouse_entered" from="Words/30" to="Words/30" method="_on_mouse_entered"]
+[connection signal="pressed" from="Words/30" to="Words/30" method="_on_pressed"]
+[connection signal="exp" from="Words/31" to="." method="_pressed"]
+[connection signal="mouse_entered" from="Words/31" to="Words/31" method="_on_mouse_entered"]
+[connection signal="pressed" from="Words/31" to="Words/31" method="_on_pressed"]
+[connection signal="exp" from="Words/32" to="." method="_pressed"]
+[connection signal="mouse_entered" from="Words/32" to="Words/32" method="_on_mouse_entered"]
+[connection signal="pressed" from="Words/32" to="Words/32" method="_on_pressed"]
+[connection signal="exp" from="Words/33" to="." method="_pressed"]
+[connection signal="mouse_entered" from="Words/33" to="Words/33" method="_on_mouse_entered"]
+[connection signal="pressed" from="Words/33" to="Words/33" method="_on_pressed"]
+[connection signal="exp" from="Words/34" to="." method="_pressed"]
+[connection signal="mouse_entered" from="Words/34" to="Words/34" method="_on_mouse_entered"]
+[connection signal="pressed" from="Words/34" to="Words/34" method="_on_pressed"]
+[connection signal="exp" from="Words/35" to="." method="_pressed"]
+[connection signal="mouse_entered" from="Words/35" to="Words/35" method="_on_mouse_entered"]
+[connection signal="pressed" from="Words/35" to="Words/35" method="_on_pressed"]
+[connection signal="exp" from="Words/36" to="." method="_pressed"]
+[connection signal="mouse_entered" from="Words/36" to="Words/36" method="_on_mouse_entered"]
+[connection signal="pressed" from="Words/36" to="Words/36" method="_on_pressed"]
+[connection signal="exp" from="Words/37" to="." method="_pressed"]
+[connection signal="mouse_entered" from="Words/37" to="Words/37" method="_on_mouse_entered"]
+[connection signal="pressed" from="Words/37" to="Words/37" method="_on_pressed"]
+[connection signal="exp" from="Words/38" to="." method="_pressed"]
+[connection signal="mouse_entered" from="Words/38" to="Words/38" method="_on_mouse_entered"]
+[connection signal="pressed" from="Words/38" to="Words/38" method="_on_pressed"]
+[connection signal="exp" from="Words/39" to="." method="_pressed"]
+[connection signal="mouse_entered" from="Words/39" to="Words/39" method="_on_mouse_entered"]
+[connection signal="pressed" from="Words/39" to="Words/39" method="_on_pressed"]
+[connection signal="exp" from="Words/40" to="." method="_pressed"]
+[connection signal="mouse_entered" from="Words/40" to="Words/40" method="_on_mouse_entered"]
+[connection signal="pressed" from="Words/40" to="Words/40" method="_on_pressed"]
+[connection signal="exp" from="Words/41" to="." method="_pressed"]
+[connection signal="mouse_entered" from="Words/41" to="Words/41" method="_on_mouse_entered"]
+[connection signal="pressed" from="Words/41" to="Words/41" method="_on_pressed"]
+[connection signal="exp" from="Words/42" to="." method="_pressed"]
+[connection signal="mouse_entered" from="Words/42" to="Words/42" method="_on_mouse_entered"]
+[connection signal="pressed" from="Words/42" to="Words/42" method="_on_pressed"]
+[connection signal="exp" from="Words/43" to="." method="_pressed"]
+[connection signal="mouse_entered" from="Words/43" to="Words/43" method="_on_mouse_entered"]
+[connection signal="pressed" from="Words/43" to="Words/43" method="_on_pressed"]
+[connection signal="exp" from="Words/44" to="." method="_pressed"]
+[connection signal="mouse_entered" from="Words/44" to="Words/44" method="_on_mouse_entered"]
+[connection signal="pressed" from="Words/44" to="Words/44" method="_on_pressed"]
+[connection signal="exp" from="Words/45" to="." method="_pressed"]
+[connection signal="mouse_entered" from="Words/45" to="Words/45" method="_on_mouse_entered"]
+[connection signal="pressed" from="Words/45" to="Words/45" method="_on_pressed"]
+[connection signal="exp" from="Words/46" to="." method="_pressed"]
+[connection signal="mouse_entered" from="Words/46" to="Words/46" method="_on_mouse_entered"]
+[connection signal="pressed" from="Words/46" to="Words/46" method="_on_pressed"]
+[connection signal="exp" from="Words/47" to="." method="_pressed"]
+[connection signal="mouse_entered" from="Words/47" to="Words/47" method="_on_mouse_entered"]
+[connection signal="pressed" from="Words/47" to="Words/47" method="_on_pressed"]
+[connection signal="exp" from="Words/48" to="." method="_pressed"]
+[connection signal="mouse_entered" from="Words/48" to="Words/48" method="_on_mouse_entered"]
+[connection signal="pressed" from="Words/48" to="Words/48" method="_on_pressed"]
+[connection signal="exp" from="Words/49" to="." method="_pressed"]
+[connection signal="mouse_entered" from="Words/49" to="Words/49" method="_on_mouse_entered"]
+[connection signal="pressed" from="Words/49" to="Words/49" method="_on_pressed"]
+[connection signal="exp" from="Words/50" to="." method="_pressed"]
+[connection signal="mouse_entered" from="Words/50" to="Words/50" method="_on_mouse_entered"]
+[connection signal="pressed" from="Words/50" to="Words/50" method="_on_pressed"]
+[connection signal="exp" from="Words/51" to="." method="_pressed"]
+[connection signal="mouse_entered" from="Words/51" to="Words/51" method="_on_mouse_entered"]
+[connection signal="pressed" from="Words/51" to="Words/51" method="_on_pressed"]
+[connection signal="exp" from="Words/52" to="." method="_pressed"]
+[connection signal="mouse_entered" from="Words/52" to="Words/52" method="_on_mouse_entered"]
+[connection signal="pressed" from="Words/52" to="Words/52" method="_on_pressed"]
+[connection signal="exp" from="Words/53" to="." method="_pressed"]
+[connection signal="mouse_entered" from="Words/53" to="Words/53" method="_on_mouse_entered"]
+[connection signal="pressed" from="Words/53" to="Words/53" method="_on_pressed"]
+[connection signal="exp" from="Words/54" to="." method="_pressed"]
+[connection signal="mouse_entered" from="Words/54" to="Words/54" method="_on_mouse_entered"]
+[connection signal="pressed" from="Words/54" to="Words/54" method="_on_pressed"]
+[connection signal="exp" from="Words/55" to="." method="_pressed"]
+[connection signal="mouse_entered" from="Words/55" to="Words/55" method="_on_mouse_entered"]
+[connection signal="pressed" from="Words/55" to="Words/55" method="_on_pressed"]
+[connection signal="exp" from="Words/56" to="." method="_pressed"]
+[connection signal="mouse_entered" from="Words/56" to="Words/56" method="_on_mouse_entered"]
+[connection signal="pressed" from="Words/56" to="Words/56" method="_on_pressed"]
+[connection signal="exp" from="Words/57" to="." method="_pressed"]
+[connection signal="mouse_entered" from="Words/57" to="Words/57" method="_on_mouse_entered"]
+[connection signal="pressed" from="Words/57" to="Words/57" method="_on_pressed"]
+[connection signal="exp" from="Words/58" to="." method="_pressed"]
+[connection signal="mouse_entered" from="Words/58" to="Words/58" method="_on_mouse_entered"]
+[connection signal="pressed" from="Words/58" to="Words/58" method="_on_pressed"]
+[connection signal="exp" from="Words/59" to="." method="_pressed"]
+[connection signal="mouse_entered" from="Words/59" to="Words/59" method="_on_mouse_entered"]
+[connection signal="pressed" from="Words/59" to="Words/59" method="_on_pressed"]
+[connection signal="exp" from="Words/60" to="." method="_pressed"]
+[connection signal="mouse_entered" from="Words/60" to="Words/60" method="_on_mouse_entered"]
+[connection signal="pressed" from="Words/60" to="Words/60" method="_on_pressed"]
+[connection signal="exp" from="Words/61" to="." method="_pressed"]
+[connection signal="mouse_entered" from="Words/61" to="Words/61" method="_on_mouse_entered"]
+[connection signal="pressed" from="Words/61" to="Words/61" method="_on_pressed"]
+[connection signal="exp" from="Words/62" to="." method="_pressed"]
+[connection signal="mouse_entered" from="Words/62" to="Words/62" method="_on_mouse_entered"]
+[connection signal="pressed" from="Words/62" to="Words/62" method="_on_pressed"]
+[connection signal="exp" from="Words/63" to="." method="_pressed"]
+[connection signal="mouse_entered" from="Words/63" to="Words/63" method="_on_mouse_entered"]
+[connection signal="pressed" from="Words/63" to="Words/63" method="_on_pressed"]
+[connection signal="pressed" from="tip_prompt/cancel" to="." method="_on_cancel_pressed"]
+[connection signal="pressed" from="tip_lose/tryAgain" to="." method="_on_try_again_pressed"]
+[connection signal="pressed" from="tip_lose/out" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="tip_win/tryAgain" to="." method="_on_try_again_pressed"]
+[connection signal="pressed" from="tip_win/next" to="." method="_on_next_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

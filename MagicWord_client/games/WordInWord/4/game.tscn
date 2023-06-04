@@ -1,0 +1,586 @@
+[gd_scene load_steps=25 format=3 uid="uid://dltp4chtboh34"]
+
+[ext_resource type="Script" path="res://games/WordInWord/4/game.gd" id="1_dsqxe"]
+[ext_resource type="Texture2D" uid="uid://dxdl6vw4l7vct" path="res://asset/images/background/background3.png" id="2_qu5qh"]
+[ext_resource type="Texture2D" uid="uid://dleopqfdsxuim" path="res://asset/images/返回.png" id="3_4jw3b"]
+[ext_resource type="FontFile" uid="uid://ds1k6dga87aji" path="res://asset/font/字酷堂清楷体.ttf" id="4_toggx"]
+[ext_resource type="Texture2D" uid="uid://ch6k1sh86rvf6" path="res://asset/images/wordInword/back.png" id="5_1fvg8"]
+[ext_resource type="Texture2D" uid="uid://c6nruktuq4t22" path="res://asset/字体库/单.png" id="6_1hndk"]
+[ext_resource type="Texture2D" uid="uid://bxywupkj70ywv" path="res://asset/images/clock.png" id="6_xau8h"]
+[ext_resource type="Texture2D" uid="uid://daqpihtwgsas1" path="res://asset/images/wordInword/g4/b/1.png" id="7_0lysy"]
+[ext_resource type="Texture2D" uid="uid://bpj72rq6vv1w6" path="res://asset/images/正确.png" id="7_lj6sy"]
+[ext_resource type="Texture2D" uid="uid://dvmpiwrityatd" path="res://asset/images/wordInword/g4/b/2.png" id="8_1xb1m"]
+[ext_resource type="Texture2D" uid="uid://d3jibrpmr0h6h" path="res://asset/images/错误.png" id="8_gk6oi"]
+[ext_resource type="Texture2D" uid="uid://du1pcdwid00xc" path="res://asset/images/wordInword/g4/b/3.png" id="9_vvvke"]
+[ext_resource type="StyleBox" uid="uid://c6rjuk2pl8tjq" path="res://asset/styles/tip.tres" id="9_xhn3r"]
+[ext_resource type="Texture2D" uid="uid://mtkv1lasojk6" path="res://asset/images/cancel.png" id="10_mnexq"]
+[ext_resource type="Texture2D" uid="uid://df6vewtfmcc3r" path="res://asset/images/wordInword/g4/b/4.png" id="10_ropqv"]
+[ext_resource type="Texture2D" uid="uid://cpl1iao3ft0wh" path="res://asset/images/wordInword/g4/b/5.png" id="11_m37t7"]
+[ext_resource type="Texture2D" uid="uid://bxeryet285kxb" path="res://asset/images/btn_lanscape.png" id="11_phcng"]
+[ext_resource type="Texture2D" uid="uid://cf305cwfax4v6" path="res://asset/images/wordInword/g4/b/6.png" id="12_2p7f8"]
+[ext_resource type="Texture2D" uid="uid://ojii7caho8oq" path="res://asset/images/wordInword/g4/b/7.png" id="13_s8dsk"]
+[ext_resource type="Texture2D" uid="uid://dbyxffrbik1u0" path="res://asset/images/wordInword/g4/b/8.png" id="14_0p6p7"]
+[ext_resource type="Texture2D" uid="uid://43y2m57xgqde" path="res://asset/images/wordInword/g4/b/9.png" id="15_t6uiq"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_04pbl"]
+texture = ExtResource("5_1fvg8")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vsrfw"]
+texture = ExtResource("10_mnexq")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ourkm"]
+texture = ExtResource("11_phcng")
+
+[node name="game1" type="Node2D"]
+script = ExtResource("1_dsqxe")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1294.0
+offset_bottom = 726.0
+texture = ExtResource("2_qu5qh")
+expand_mode = 1
+
+[node name="tips" type="Button" parent="."]
+offset_left = 128.0
+offset_top = 89.0
+offset_right = 237.0
+offset_bottom = 141.0
+text = "提示"
+
+[node name="back" type="Button" parent="."]
+offset_left = 140.0
+offset_top = 543.0
+offset_right = 247.0
+offset_bottom = 600.0
+text = "返回"
+icon = ExtResource("3_4jw3b")
+expand_icon = true
+
+[node name="Words" type="GridContainer" parent="."]
+offset_left = 121.0
+offset_top = 189.0
+offset_right = 641.0
+offset_bottom = 442.0
+columns = 6
+
+[node name="1" type="Button" parent="Words"]
+visible = false
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_toggx")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_04pbl")
+
+[node name="2" type="Button" parent="Words"]
+visible = false
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_toggx")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_04pbl")
+
+[node name="3" type="Button" parent="Words"]
+visible = false
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_toggx")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_04pbl")
+
+[node name="4" type="Button" parent="Words"]
+visible = false
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_toggx")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_04pbl")
+
+[node name="5" type="Button" parent="Words"]
+visible = false
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_toggx")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_04pbl")
+
+[node name="6" type="Button" parent="Words"]
+visible = false
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_toggx")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_04pbl")
+
+[node name="7" type="Button" parent="Words"]
+visible = false
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_toggx")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_04pbl")
+
+[node name="8" type="Button" parent="Words"]
+visible = false
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_toggx")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_04pbl")
+
+[node name="9" type="Button" parent="Words"]
+visible = false
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_toggx")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_04pbl")
+
+[node name="10" type="Button" parent="Words"]
+visible = false
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_toggx")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_04pbl")
+
+[node name="11" type="Button" parent="Words"]
+visible = false
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_toggx")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_04pbl")
+
+[node name="12" type="Button" parent="Words"]
+visible = false
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_toggx")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_04pbl")
+
+[node name="13" type="Button" parent="Words"]
+visible = false
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_toggx")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_04pbl")
+
+[node name="14" type="Button" parent="Words"]
+visible = false
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_toggx")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_04pbl")
+
+[node name="15" type="Button" parent="Words"]
+visible = false
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_toggx")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_04pbl")
+
+[node name="16" type="Button" parent="Words"]
+visible = false
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_toggx")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_04pbl")
+
+[node name="17" type="Button" parent="Words"]
+visible = false
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_toggx")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_04pbl")
+
+[node name="18" type="Button" parent="Words"]
+visible = false
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_toggx")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_04pbl")
+
+[node name="19" type="Button" parent="Words"]
+visible = false
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_toggx")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_04pbl")
+
+[node name="20" type="Button" parent="Words"]
+visible = false
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_toggx")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_04pbl")
+
+[node name="commit" type="Button" parent="."]
+offset_left = 728.0
+offset_top = 553.0
+offset_right = 837.0
+offset_bottom = 605.0
+text = "提交"
+
+[node name="replace" type="Button" parent="."]
+offset_left = 1007.0
+offset_top = 549.0
+offset_right = 1116.0
+offset_bottom = 601.0
+text = "重置"
+
+[node name="Word" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 592.0
+offset_top = 173.0
+offset_right = 1128.0
+offset_bottom = 531.0
+
+[node name="TextureButton" type="TextureButton" parent="Word"]
+visible = false
+layout_mode = 0
+offset_left = 211.0
+offset_top = 34.0
+offset_right = 479.0
+offset_bottom = 309.0
+texture_normal = ExtResource("6_1hndk")
+
+[node name="show1" type="TextureButton" parent="Word"]
+layout_mode = 0
+offset_left = 285.0
+offset_top = 44.0
+offset_right = 323.0
+offset_bottom = 88.0
+texture_normal = ExtResource("7_0lysy")
+
+[node name="show2" type="TextureButton" parent="Word"]
+layout_mode = 0
+offset_left = 345.0
+offset_top = 34.0
+offset_right = 397.0
+offset_bottom = 99.0
+button_mask = 0
+texture_normal = ExtResource("8_1xb1m")
+
+[node name="show2_inhance" type="TextureButton" parent="Word"]
+layout_mode = 0
+offset_left = 377.0
+offset_top = 40.0
+offset_right = 395.0
+offset_bottom = 94.0
+rotation = 0.530262
+
+[node name="show4" type="TextureButton" parent="Word"]
+layout_mode = 0
+offset_left = 268.0
+offset_top = 89.0
+offset_right = 416.0
+offset_bottom = 116.0
+button_mask = 0
+texture_normal = ExtResource("10_ropqv")
+
+[node name="show4_inhance" type="TextureButton" parent="Word"]
+layout_mode = 0
+offset_left = 296.0
+offset_top = 122.0
+offset_right = 319.0
+offset_bottom = 211.0
+rotation = -1.73069
+
+[node name="show3" type="TextureButton" parent="Word"]
+layout_mode = 0
+offset_left = 261.0
+offset_top = 98.0
+offset_right = 309.0
+offset_bottom = 187.0
+button_mask = 0
+texture_normal = ExtResource("9_vvvke")
+
+[node name="show3_inhance" type="TextureButton" parent="Word"]
+layout_mode = 0
+offset_left = 259.0
+offset_top = 100.0
+offset_right = 282.0
+offset_bottom = 189.0
+rotation = -0.224541
+
+[node name="show5" type="TextureButton" parent="Word"]
+layout_mode = 0
+offset_left = 376.0
+offset_top = 88.0
+offset_right = 430.0
+offset_bottom = 186.0
+button_mask = 0
+texture_normal = ExtResource("11_m37t7")
+
+[node name="show5_inhance" type="TextureButton" parent="Word"]
+layout_mode = 0
+offset_left = 403.0
+offset_top = 89.0
+offset_right = 426.0
+offset_bottom = 178.0
+rotation = 0.290033
+
+[node name="show6" type="TextureButton" parent="Word"]
+layout_mode = 0
+offset_left = 308.0
+offset_top = 121.0
+offset_right = 380.0
+offset_bottom = 146.0
+texture_normal = ExtResource("12_2p7f8")
+
+[node name="show7" type="TextureButton" parent="Word"]
+layout_mode = 0
+offset_left = 290.0
+offset_top = 158.0
+offset_right = 392.0
+offset_bottom = 181.0
+texture_normal = ExtResource("13_s8dsk")
+
+[node name="show8" type="TextureButton" parent="Word"]
+layout_mode = 0
+offset_left = 220.0
+offset_top = 194.0
+offset_right = 468.0
+offset_bottom = 229.0
+texture_normal = ExtResource("14_0p6p7")
+
+[node name="show9" type="TextureButton" parent="Word"]
+layout_mode = 0
+offset_left = 329.0
+offset_top = 111.0
+offset_right = 353.0
+offset_bottom = 314.0
+texture_normal = ExtResource("15_t6uiq")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="time" type="Button" parent="."]
+offset_left = 658.0
+offset_top = 81.0
+offset_right = 823.0
+offset_bottom = 150.0
+theme_override_colors/font_color = Color(0.878431, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "60"
+icon = ExtResource("6_xau8h")
+flat = true
+expand_icon = true
+
+[node name="right" type="Button" parent="."]
+visible = false
+offset_left = 512.0
+offset_top = 486.0
+offset_right = 695.0
+offset_bottom = 560.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.717647, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "回答正确"
+icon = ExtResource("7_lj6sy")
+flat = true
+expand_icon = true
+
+[node name="error" type="Button" parent="."]
+visible = false
+offset_left = 516.0
+offset_top = 490.0
+offset_right = 731.0
+offset_bottom = 554.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.717647, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "错误"
+icon = ExtResource("8_gk6oi")
+flat = true
+alignment = 0
+
+[node name="Label" type="Label" parent="."]
+offset_left = 303.0
+offset_top = 49.0
+offset_right = 577.0
+offset_bottom = 94.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "请至少找出10个字符"
+
+[node name="tip_prompt" type="Panel" parent="."]
+visible = false
+offset_left = 3.0
+offset_top = 4.0
+offset_right = 1287.0
+offset_bottom = 724.0
+
+[node name="back" type="Button" parent="tip_prompt"]
+layout_mode = 0
+offset_left = 333.0
+offset_top = 161.0
+offset_right = 911.0
+offset_bottom = 464.0
+mouse_filter = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("9_xhn3r")
+theme_override_styles/hover = ExtResource("9_xhn3r")
+text = "丨一二十亖..."
+
+[node name="cancel" type="Button" parent="tip_prompt"]
+layout_mode = 0
+offset_left = 952.0
+offset_top = 83.0
+offset_right = 1017.0
+offset_bottom = 147.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_vsrfw")
+
+[node name="tip_win" type="Panel" parent="."]
+visible = false
+offset_left = 3.0
+offset_top = 4.0
+offset_right = 1287.0
+offset_bottom = 724.0
+
+[node name="back" type="Button" parent="tip_win"]
+layout_mode = 0
+offset_left = 333.0
+offset_top = 161.0
+offset_right = 911.0
+offset_bottom = 464.0
+mouse_filter = 2
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = ExtResource("9_xhn3r")
+theme_override_styles/hover = ExtResource("9_xhn3r")
+text = "恭喜找出
+所有字"
+
+[node name="tryAgain" type="Button" parent="tip_win"]
+layout_mode = 0
+offset_left = 375.0
+offset_top = 501.0
+offset_right = 586.0
+offset_bottom = 574.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_ourkm")
+text = "再试一次"
+
+[node name="next" type="Button" parent="tip_win"]
+layout_mode = 0
+offset_left = 660.0
+offset_top = 499.0
+offset_right = 871.0
+offset_bottom = 572.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_ourkm")
+text = "下一关
+"
+
+[node name="tip_lose" type="Panel" parent="."]
+visible = false
+offset_left = 3.0
+offset_top = 4.0
+offset_right = 1287.0
+offset_bottom = 724.0
+
+[node name="back" type="Button" parent="tip_lose"]
+layout_mode = 0
+offset_left = 333.0
+offset_top = 161.0
+offset_right = 911.0
+offset_bottom = 464.0
+mouse_filter = 2
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = ExtResource("9_xhn3r")
+theme_override_styles/hover = ExtResource("9_xhn3r")
+text = "时间到"
+
+[node name="tryAgain" type="Button" parent="tip_lose"]
+layout_mode = 0
+offset_left = 375.0
+offset_top = 501.0
+offset_right = 586.0
+offset_bottom = 574.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_ourkm")
+text = "再试一次"
+
+[node name="out" type="Button" parent="tip_lose"]
+layout_mode = 0
+offset_left = 660.0
+offset_top = 499.0
+offset_right = 871.0
+offset_bottom = 572.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_ourkm")
+text = "退出
+"
+
+[connection signal="pressed" from="tips" to="." method="_on_tips_pressed"]
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="commit" to="." method="_on_commit_pressed"]
+[connection signal="pressed" from="replace" to="." method="_on_replace_pressed"]
+[connection signal="pressed" from="Word/show1" to="." method="_on_btn_pressed" binds= [1]]
+[connection signal="pressed" from="Word/show2_inhance" to="." method="_on_btn_pressed" binds= [2]]
+[connection signal="pressed" from="Word/show4_inhance" to="." method="_on_btn_pressed" binds= [4]]
+[connection signal="pressed" from="Word/show3_inhance" to="." method="_on_btn_pressed" binds= [3]]
+[connection signal="pressed" from="Word/show5_inhance" to="." method="_on_btn_pressed" binds= [5]]
+[connection signal="pressed" from="Word/show6" to="." method="_on_btn_pressed" binds= [6]]
+[connection signal="pressed" from="Word/show7" to="." method="_on_btn_pressed" binds= [7]]
+[connection signal="pressed" from="Word/show8" to="." method="_on_btn_pressed" binds= [8]]
+[connection signal="pressed" from="Word/show9" to="." method="_on_btn_pressed" binds= [9]]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="tip_prompt/cancel" to="." method="_on_cancel_pressed"]
+[connection signal="pressed" from="tip_win/tryAgain" to="." method="_on_try_again_pressed"]
+[connection signal="pressed" from="tip_win/next" to="." method="_on_next_pressed"]
+[connection signal="pressed" from="tip_lose/tryAgain" to="." method="_on_try_again_pressed"]
+[connection signal="pressed" from="tip_lose/out" to="." method="_on_back_pressed"]

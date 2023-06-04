@@ -1,0 +1,259 @@
+[gd_scene load_steps=15 format=3 uid="uid://ckk00rccsoh0k"]
+
+[ext_resource type="Script" path="res://games/WordInWord/word_in_word.gd" id="1_s3gtp"]
+[ext_resource type="Texture2D" uid="uid://q5floqjj05ag" path="res://asset/images/background/background2.png" id="2_2wwb6"]
+[ext_resource type="StyleBox" uid="uid://o1o3o7gb6laq" path="res://asset/styles/back.tres" id="3_6uii3"]
+[ext_resource type="FontFile" uid="uid://5jgfpl817j6v" path="res://asset/font/上首至尊书法体.ttf" id="4_rnbtg"]
+[ext_resource type="StyleBox" uid="uid://8g0v3lbfmj1f" path="res://asset/styles/btn_vertical.tres" id="5_l7e2q"]
+[ext_resource type="Texture2D" uid="uid://bpj72rq6vv1w6" path="res://asset/images/正确.png" id="6_laomb"]
+[ext_resource type="PackedScene" uid="uid://bgq46v3y2864r" path="res://games/WordInWord/1/game.tscn" id="7_fxsts"]
+[ext_resource type="PackedScene" uid="uid://domojwbr1urn2" path="res://games/WordInWord/2/game.tscn" id="8_s3b0y"]
+[ext_resource type="StyleBox" uid="uid://c6rjuk2pl8tjq" path="res://asset/styles/tip.tres" id="9_x4qjj"]
+[ext_resource type="PackedScene" uid="uid://d02whqmygt1l5" path="res://games/WordInWord/3/game.tscn" id="9_x5man"]
+[ext_resource type="PackedScene" uid="uid://dltp4chtboh34" path="res://games/WordInWord/4/game.tscn" id="10_16tut"]
+[ext_resource type="Texture2D" uid="uid://mtkv1lasojk6" path="res://asset/images/cancel.png" id="10_ey0cm"]
+[ext_resource type="PackedScene" uid="uid://b4vwfohck272o" path="res://games/WordInWord/5/game.tscn" id="11_y8k75"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fpv5u"]
+texture = ExtResource("10_ey0cm")
+
+[node name="WordInWord" type="Node2D"]
+script = ExtResource("1_s3gtp")
+
+[node name="ChooseLayer" type="Node2D" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="ChooseLayer"]
+offset_left = 2.0
+offset_right = 1279.0
+offset_bottom = 718.0
+texture = ExtResource("2_2wwb6")
+expand_mode = 1
+
+[node name="Back" type="Button" parent="ChooseLayer"]
+offset_left = 1066.0
+offset_top = 66.0
+offset_right = 1162.0
+offset_bottom = 153.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = ExtResource("3_6uii3")
+text = "返回"
+
+[node name="scroll" type="ScrollContainer" parent="ChooseLayer"]
+offset_left = 198.0
+offset_top = 162.0
+offset_right = 1150.0
+offset_bottom = 672.0
+horizontal_scroll_mode = 3
+
+[node name="hbox" type="HBoxContainer" parent="ChooseLayer/scroll"]
+layout_mode = 2
+theme_override_constants/separation = 90
+
+[node name="v1" type="VBoxContainer" parent="ChooseLayer/scroll/hbox"]
+layout_mode = 2
+
+[node name="game" type="Button" parent="ChooseLayer/scroll/hbox/v1"]
+custom_minimum_size = Vector2(100, 400)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0.415686, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.576471, 0.27451, 0.611765, 1)
+theme_override_colors/font_focus_color = Color(0.415686, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_rnbtg")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = ExtResource("5_l7e2q")
+text = "字
+找
+字
+
+茶"
+
+[node name="isWin" type="TextureButton" parent="ChooseLayer/scroll/hbox/v1"]
+visible = false
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+texture_normal = ExtResource("6_laomb")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="v2" type="VBoxContainer" parent="ChooseLayer/scroll/hbox"]
+layout_mode = 2
+
+[node name="game" type="Button" parent="ChooseLayer/scroll/hbox/v2"]
+custom_minimum_size = Vector2(100, 400)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0.415686, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.576471, 0.27451, 0.611765, 1)
+theme_override_colors/font_focus_color = Color(0.415686, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_rnbtg")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = ExtResource("5_l7e2q")
+text = "字
+找
+字
+
+玉"
+
+[node name="isWin" type="TextureButton" parent="ChooseLayer/scroll/hbox/v2"]
+visible = false
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+texture_normal = ExtResource("6_laomb")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="v3" type="VBoxContainer" parent="ChooseLayer/scroll/hbox"]
+layout_mode = 2
+
+[node name="game" type="Button" parent="ChooseLayer/scroll/hbox/v3"]
+custom_minimum_size = Vector2(100, 400)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0.415686, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.576471, 0.27451, 0.611765, 1)
+theme_override_colors/font_focus_color = Color(0.415686, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_rnbtg")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = ExtResource("5_l7e2q")
+text = "字
+找
+字
+
+朱"
+
+[node name="isWin" type="TextureButton" parent="ChooseLayer/scroll/hbox/v3"]
+visible = false
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+texture_normal = ExtResource("6_laomb")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="v4" type="VBoxContainer" parent="ChooseLayer/scroll/hbox"]
+layout_mode = 2
+
+[node name="game" type="Button" parent="ChooseLayer/scroll/hbox/v4"]
+custom_minimum_size = Vector2(100, 400)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0.415686, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.576471, 0.27451, 0.611765, 1)
+theme_override_colors/font_focus_color = Color(0.415686, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_rnbtg")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = ExtResource("5_l7e2q")
+text = "字
+找
+字
+
+单"
+
+[node name="isWin" type="TextureButton" parent="ChooseLayer/scroll/hbox/v4"]
+visible = false
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+texture_normal = ExtResource("6_laomb")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="v5" type="VBoxContainer" parent="ChooseLayer/scroll/hbox"]
+layout_mode = 2
+
+[node name="game" type="Button" parent="ChooseLayer/scroll/hbox/v5"]
+custom_minimum_size = Vector2(100, 400)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0.415686, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.576471, 0.27451, 0.611765, 1)
+theme_override_colors/font_focus_color = Color(0.415686, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_rnbtg")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = ExtResource("5_l7e2q")
+text = "字
+找
+字
+
+星"
+
+[node name="isWin" type="TextureButton" parent="ChooseLayer/scroll/hbox/v5"]
+visible = false
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+texture_normal = ExtResource("6_laomb")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="game1" parent="." instance=ExtResource("7_fxsts")]
+visible = false
+
+[node name="game2" parent="." instance=ExtResource("8_s3b0y")]
+visible = false
+
+[node name="game3" parent="." instance=ExtResource("9_x5man")]
+visible = false
+
+[node name="game4" parent="." instance=ExtResource("10_16tut")]
+visible = false
+
+[node name="game5" parent="." instance=ExtResource("11_y8k75")]
+visible = false
+
+[node name="tip_prompt" type="Panel" parent="."]
+visible = false
+offset_left = 3.0
+offset_top = 4.0
+offset_right = 1287.0
+offset_bottom = 724.0
+
+[node name="back" type="Button" parent="tip_prompt"]
+layout_mode = 0
+offset_left = 333.0
+offset_top = 161.0
+offset_right = 911.0
+offset_bottom = 464.0
+mouse_filter = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("9_x4qjj")
+theme_override_styles/hover = ExtResource("9_x4qjj")
+text = "请先完成前一关卡"
+
+[node name="cancel" type="Button" parent="tip_prompt"]
+layout_mode = 0
+offset_left = 952.0
+offset_top = 83.0
+offset_right = 1017.0
+offset_bottom = 147.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_fpv5u")
+
+[node name="test" type="Button" parent="."]
+visible = false
+offset_left = 535.0
+offset_top = 37.0
+offset_right = 667.0
+offset_bottom = 130.0
+text = "test
+"
+
+[connection signal="pressed" from="ChooseLayer/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="ChooseLayer/scroll/hbox/v1/game" to="." method="_openGame" binds= [1]]
+[connection signal="pressed" from="ChooseLayer/scroll/hbox/v2/game" to="." method="_openGame" binds= [2]]
+[connection signal="pressed" from="ChooseLayer/scroll/hbox/v3/game" to="." method="_openGame" binds= [3]]
+[connection signal="pressed" from="ChooseLayer/scroll/hbox/v4/game" to="." method="_openGame" binds= [4]]
+[connection signal="pressed" from="ChooseLayer/scroll/hbox/v5/game" to="." method="_openGame" binds= [5]]
+[connection signal="next" from="game1" to="." method="_openGame"]
+[connection signal="out" from="game1" to="." method="_on_game_out"]
+[connection signal="next" from="game2" to="." method="_openGame"]
+[connection signal="out" from="game2" to="." method="_on_game_out"]
+[connection signal="next" from="game3" to="." method="_openGame"]
+[connection signal="out" from="game3" to="." method="_on_game_out"]
+[connection signal="win" from="game3" to="." method="_update_win"]
+[connection signal="next" from="game4" to="." method="_openGame"]
+[connection signal="out" from="game4" to="." method="_on_game_out"]
+[connection signal="win" from="game4" to="." method="_update_win"]
+[connection signal="next" from="game5" to="." method="_openGame"]
+[connection signal="out" from="game5" to="." method="_on_game_out"]
+[connection signal="win" from="game5" to="." method="_update_win"]
+[connection signal="pressed" from="tip_prompt/cancel" to="." method="_on_cancel_pressed"]
+[connection signal="pressed" from="test" to="." method="_on_test_pressed"]
