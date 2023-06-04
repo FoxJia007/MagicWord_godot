@@ -17,4 +17,4 @@ android game with godot4.0
 
 在服务器中下载对应的Linux版本，注意在3版本中，提供linux server，包括无头模式和server模式。
 
-但是在4版本中，并没有提供，直接使用linux版本，在打开pck文件时，加上参数--headless即可启动。
+但是在4版本中，并没有提供，直接使用linux版本，在指定pck文件时，加上参数--headless即可启动。
